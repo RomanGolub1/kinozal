@@ -1,2 +1,13 @@
 @use "presets/" as *;
 @use "mixins/" as *;
+
+.left-saidbar {
+   margin-bottom: $gap-xl;
+}
+.vertical-slider {
+   border-radius: 4px;
+   overflow: hidden;
+   &__image {
+      width: 100%;
+   }
+}
