@@ -1,5 +1,5 @@
-@use "persets" as *;
-@use "mixins" as *;
+@use "presets/" as *;
+@use "mixins/" as *;
 
 html {
    font-size: $font-size;
@@ -7,8 +7,10 @@ html {
 body {
    font-family: $font-main;
    font-size: $font-size;
+   overflow-y: scroll;
 }
 a {
+   text-decoration: none;
    color: $color-primary;
    &:hover,
    &:focus {
