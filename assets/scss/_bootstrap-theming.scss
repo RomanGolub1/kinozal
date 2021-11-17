@@ -37,6 +37,7 @@
       }
    }
 }
+
 .navbar-right {
    @include sm-min {
       margin-top: 0;
@@ -45,6 +46,7 @@
       }
    }
 }
+
 .navbar-header {
    text-align: center;
 }
@@ -59,7 +61,7 @@
    &:not(:last-of-type) {
       margin-bottom: $gap * 2;
    }
-   &:not(:last-of-type) {
+   &:last-of-type {
       margin-bottom: 0;
    }
    > .panel-heading {
@@ -71,6 +73,15 @@
    }
 }
 .panel-body {
-   border: 1px solid $color-grey;
+   border: 1px solid $color-gray;
    border-radius: 0 0 4px 4px;
+}
+.input {
+   &-lg,
+   &-group-lg > .form-control {
+      font-size: 0.875rem;
+   }
+}
+.thumbnail {
+   transition: background-color 0.25s;
 }

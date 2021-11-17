@@ -3,4 +3,57 @@
 
 .main {
    margin-bottom: $gap-xl;
+   .site-search {
+      margin-bottom: $gap * 3;
+   }
+   .user-login {
+      margin-bottom: $gap * 4;
+   }
+}
+.new-films {
+   &-title {
+      font-family: $font-header;
+      position: relative;
+      overflow: hidden;
+      margin: -2.999999989999999px 0 1em 0;
+      font-size: 3rem;
+      &::after {
+         position: absolute;
+         width: 100%;
+         margin: 0.85em 0 0 15px;
+         content: "";
+         border-bottom: 3px solid #f0ad4f;
+      }
+   }
+   margin-bottom: $gap-xl;
+   &-row {
+      margin-right: -$gap-sm;
+      margin-left: -$gap-sm;
+      margin-bottom: -$gap;
+   }
+   &-item {
+      padding-right: $gap-sm;
+      padding-left: $gap-sm;
+      margin-bottom: $gap;
+      &__thumbnail {
+         margin-bottom: 0;
+      }
+      &__image {
+         width: 100%;
+      }
+      &__title {
+         @include text-shortener;
+         display: block;
+         overflow: hidden;
+         margin: 0;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         font-size: 1rem;
+         font-weight: bold;
+         -o-text-overflow: ellipsis;
+      }
+      &__caption {
+         text-align: center;
+      }
+   }
 }
