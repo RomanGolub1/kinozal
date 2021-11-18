@@ -156,10 +156,6 @@ section {
   margin-bottom: 60px;
 }
 
-.top-week,
-.new-films {
-  margin-bottom: 80px;
-}
 .top-week-title,
 .new-films-title {
   font-family: "PT Serif", serif;
@@ -215,10 +211,6 @@ section {
   color: #ffffff;
 }
 
-.film-news,
-.top-week {
-  margin-bottom: 80px;
-}
 .film-news-title,
 .top-week-title {
   margin: 60px 0 45px 45px;
