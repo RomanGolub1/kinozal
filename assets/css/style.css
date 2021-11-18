@@ -84,6 +84,41 @@ a:hover, a:focus {
   color: #df8a13;
 }
 
+h1 {
+  font-family: "PT Serif", serif;
+}
+h1::after {
+  content: "";
+  width: 100%;
+  margin: 0.85em 0 0 15px;
+  position: absolute;
+  border-bottom: 3px solid #f0ad4f;
+}
+
+h2 {
+  font-family: "PT Serif", serif;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  margin: 0.25em 0 0 0;
+  border-bottom: 3px solid #f0ad4f;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin: 0.85em 0 0 15px;
+  border-bottom: 3px solid #f0ad4f;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
 .header {
   margin-bottom: 80px;
 }
@@ -128,18 +163,8 @@ a:hover, a:focus {
 .top-week-title,
 .new-films-title {
   font-family: "PT Serif", serif;
-  position: relative;
-  overflow: hidden;
   margin: -9.99999999px 0 1em 0;
   font-size: 3rem;
-}
-.top-week-title::after,
-.new-films-title::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  margin: 0.85em 0 0 15px;
-  border-bottom: 3px solid #f0ad4f;
 }
 .top-week-row,
 .new-films-row {
@@ -196,27 +221,8 @@ a:hover, a:focus {
 }
 .film-news-title,
 .top-week-title {
-  position: relative;
-  overflow: hidden;
   margin: 60px 0 45px 45px;
   font-size: 2.5rem;
-}
-.film-news-title::before,
-.top-week-title::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  left: 0;
-  margin: 0.25em 0 0 0;
-  border-bottom: 3px solid #f0ad4f;
-}
-.film-news-title::after,
-.top-week-title::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  margin: 0.85em 0 0 15px;
-  border-bottom: 3px solid #f0ad4f;
 }
 
 .film-news-item .thumbnail {
@@ -252,6 +258,27 @@ a:hover, a:focus {
   -webkit-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
+}
+
+.film-info {
+  font-size: 1.2em;
+}
+.film-info__wrapper {
+  white-space: nowrap;
+}
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+.film-info__badge {
+  font-size: 0.8em;
+}
+.film-info__well {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-comment-form__button {
+  float: right;
 }
 
 .left-saidbar {
@@ -375,7 +402,41 @@ a:hover, a:focus {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+
+.footer {
+  padding-top: 45px;
+  color: #d5d5d5;
+  background-color: #232323;
+}
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+.footer a {
+  color: #6f6f6f;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+.footer-fifth {
+  margin: 20px 0;
+  text-align: center;
+}
+.footer-fifth a {
+  color: #d5d5d5;
+}
 @media (min-width: 576px) {
+  h1 {
+    margin: -9.99999999px 0 1em;
+    font-size: 3rem;
+  }
+  h2 {
+    margin: 60px 0 45px 45px;
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
   .header-logo__title {
     font-size: 3.5rem;
   }
@@ -403,6 +464,17 @@ a:hover, a:focus {
   }
 }
 @media (max-width: 575.8px) {
+  h1 {
+    margin: 0 0 1em;
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 45px 0 30px 45px;
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
   .header-logo__title {
     font-size: 2.5rem;
   }
