@@ -10,18 +10,19 @@
       margin-bottom: $gap * 4;
    }
 }
+.top-week,
 .new-films {
    &-title {
       font-family: $font-header;
       position: relative;
       overflow: hidden;
-      margin: -2.999999989999999px 0 1em 0;
+      margin: -9.99999999px 0 1em 0;
       font-size: 3rem;
       &::after {
+         content: "";
          position: absolute;
          width: 100%;
          margin: 0.85em 0 0 15px;
-         content: "";
          border-bottom: 3px solid #f0ad4f;
       }
    }
@@ -54,6 +55,80 @@
       }
       &__caption {
          text-align: center;
+      }
+      &:hover {
+         .thumbnail {
+            border-color: $color-accent;
+            background-color: $color-accent;
+         }
+         h3 {
+            color: $color-white;
+         }
+      }
+   }
+}
+
+.film-news,
+.top-week {
+   margin-bottom: $gap-xl;
+   &-title {
+      position: relative;
+      overflow: hidden;
+      margin: 60px 0 45px 45px;
+      font-size: 2.5rem;
+
+      &::before {
+         content: "";
+         position: absolute;
+         width: 30px;
+         left: 0;
+         margin: 0.25em 0 0 0;
+         border-bottom: 3px solid #f0ad4f;
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         margin: 0.85em 0 0 15px;
+         border-bottom: 3px solid #f0ad4f;
+      }
+   }
+}
+
+.film-news {
+   &-item {
+      .thumbnail {
+         margin-bottom: 0;
+         transition: background-color 0.25s;
+      }
+      &__image {
+         width: 100%;
+      }
+      &__text {
+         text-align: justify;
+      }
+      &__button {
+         float: right;
+         margin-bottom: $gap * 2;
+         transition: background-color 0.25s;
+      }
+      &:hover {
+         .thumbnail {
+            border-color: $color-accent;
+            background-color: $color-accent;
+         }
+
+         h3 > a {
+            color: $color-accent;
+         }
+
+         .btn-warning {
+            background-color: $color-accent;
+         }
+      }
+      h3 > a {
+         transition: color 0.25s;
       }
    }
 }
