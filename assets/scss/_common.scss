@@ -2,80 +2,97 @@
 @use "mixins/" as *;
 
 html {
-   font-size: $font-size;
+  font-size: $font-size;
 }
 body {
-   font-family: $font-main;
-   font-size: $font-size;
-   overflow-y: scroll;
+  overflow-y: scroll;
+
+  font-family: $font-main;
+  font-size: $font-size;
 }
 a {
-   text-decoration: none;
-   color: $color-primary;
-   &:hover,
-   &:focus {
-      text-decoration: none;
-      color: $color-accent;
-   }
+  text-decoration: none;
+
+  color: $color-primary;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: $color-accent;
+  }
 }
 h1 {
-   font-family: $font-header;
+  font-family: $font-header;
 
-   @include xs-min {
-      margin: -$gap-md 0 1em;
-      font-size: 3rem;
-   }
-   @include xs {
-      margin: 0 0 1em;
-      font-size: 2rem;
-   }
+  @include xs-min {
+    margin: -$gap-md 0 1em;
 
-   &::after {
-      content: "";
-      width: 100%;
-      margin: 0.85em 0 0 $gap;
-      position: absolute;
-      border-bottom: 3px solid $color-accent-light;
-   }
+    font-size: 3rem;
+  }
+  @include xs {
+    margin: 0 0 1em;
+
+    font-size: 2rem;
+  }
+
+  &::after {
+    position: absolute;
+
+    width: 100%;
+    margin: 0.85em 0 0 $gap;
+
+    content: "";
+
+    border-bottom: 3px solid $color-accent-light;
+  }
 }
 h2 {
-   font-family: $font-header;
+  font-family: $font-header;
 
-   @include xs-min {
-      margin: ($gap * 4) 0 ($gap * 3) ($gap * 3);
-      font-size: 2.5rem;
-   }
-   @include xs {
-      margin: ($gap * 3) 0 ($gap * 2) ($gap * 3);
-      font-size: 1.75rem;
-   }
+  @include xs-min {
+    margin: ($gap * 4) 0 ($gap * 3) ($gap * 3);
 
-   &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 30px;
-      margin: 0.25em 0 0 0;
-      border-bottom: 3px solid $color-accent-light;
-   }
+    font-size: 2.5rem;
+  }
+  @include xs {
+    margin: ($gap * 3) 0 ($gap * 2) ($gap * 3);
 
-   &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      margin: 0.85em 0 0 15px;
-      border-bottom: 3px solid $color-accent-light;
-   }
+    font-size: 1.75rem;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+
+    width: 30px;
+    margin: 0.25em 0 0 0;
+
+    content: "";
+
+    border-bottom: 3px solid $color-accent-light;
+  }
+
+  &::after {
+    position: absolute;
+
+    width: 100%;
+    margin: 0.85em 0 0 15px;
+
+    content: "";
+
+    border-bottom: 3px solid $color-accent-light;
+  }
 }
 h3 {
-   @include xs-min {
-      font-size: 1.5rem;
-   }
-   @include xs {
-      font-size: 1.25rem;
-   }
+  @include xs-min {
+    font-size: 1.5rem;
+  }
+  @include xs {
+    font-size: 1.25rem;
+  }
 }
 section {
-   position: relative;
-   overflow: hidden;
+  position: relative;
+
+  overflow: hidden;
 }

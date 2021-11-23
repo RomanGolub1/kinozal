@@ -2,35 +2,45 @@
 @use "mixins/" as *;
 
 .header {
-   margin-bottom: $gap-xl;
+  margin-bottom: $gap-xl;
 }
 
 .header-logo {
-   padding: 100px 0;
-   text-align: center;
-   background-color: $color-dark;
-   background-image: url(../img/header-bg.jpg);
-   background-position: center;
-   background-size: cover;
-   &__title {
-      display: block;
-      font-family: $font-header;
-      letter-spacing: 0.33em;
-      padding-left: 0.33em;
-      color: $color-accent;
-      @extend %text-shadow;
-      @include xs-min {
-         font-size: 3.5rem;
-      }
-      @include xs {
-         font-size: 2.5rem;
-      }
-   }
-   &__description {
-      display: block;
-      font-size: 1.15rem;
-      letter-spacing: 0.2em;
-      color: $color-white;
-      text-shadow: 0 0 5px $color-black, 0 0 10px $color-black, 0 0 20px $color-black;
-   }
+  padding: 100px 0;
+
+  text-align: center;
+
+  background-color: $color-dark;
+  background-image: url(../img/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  &__title {
+    display: block;
+
+    padding-left: 0.33em;
+
+    letter-spacing: 0.33em;
+
+    color: $color-accent;
+
+    font-family: $font-header;
+
+    @extend %text-shadow;
+    @include xs-min {
+      font-size: 3.5rem;
+    }
+    @include xs {
+      font-size: 2.5rem;
+    }
+  }
+  &__description {
+    display: block;
+
+    letter-spacing: 0.2em;
+
+    color: $color-white;
+    text-shadow: 0 0 5px $color-black, 0 0 10px $color-black, 0 0 20px $color-black;
+
+    font-size: 1.15rem;
+  }
 }

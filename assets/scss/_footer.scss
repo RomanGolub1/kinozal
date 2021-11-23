@@ -2,29 +2,30 @@
 @use "mixins/" as *;
 
 .footer {
-   padding-top: $gap * 3;
-   color: $color-gray;
-   background-color: $color-dark;
-   ul {
-      padding: 0;
+  padding-top: $gap * 3;
 
-      list-style: none;
-   }
+  color: $color-gray;
+  background-color: $color-dark;
+  ul {
+    padding: 0;
 
-   a {
-      color: $color-gray-dark;
+    list-style: none;
+  }
 
-      &:hover {
-         color: $color-white;
-      }
-   }
-   &-fifth {
-      margin: 20px 0;
+  a {
+    color: $color-gray-dark;
 
-      text-align: center;
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &-fifth {
+    margin: 20px 0;
 
-      a {
-         color: $color-gray;
-      }
-   }
+    text-align: center;
+
+    a {
+      color: $color-gray;
+    }
+  }
 }

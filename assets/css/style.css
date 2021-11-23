@@ -15,7 +15,6 @@
 }
 .navbar-inverse .navbar-nav .active > a {
   background-color: #053159;
-  border-radius: 4px;
 }
 .navbar-inverse .navbar-nav .active > a:focus, .navbar-inverse .navbar-nav .active > a:hover {
   background-color: #517ba2;
@@ -27,7 +26,7 @@
 
 .navbar-toggle {
   float: none;
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .panel-info {
@@ -43,11 +42,11 @@
   margin-bottom: 0;
 }
 .panel-info > .panel-heading {
-  color: #ffffff;
-  background-color: #df8a13;
-  border: none;
-  font-size: 1.25rem;
   letter-spacing: 0.08em;
+  color: #ffffff;
+  border: none;
+  background-color: #df8a13;
+  font-size: 1.25rem;
 }
 
 .panel-body {
@@ -70,9 +69,9 @@ html {
 }
 
 body {
+  overflow-y: scroll;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  overflow-y: scroll;
 }
 
 a {
@@ -88,10 +87,10 @@ h1 {
   font-family: "PT Serif", serif;
 }
 h1::after {
-  content: "";
+  position: absolute;
   width: 100%;
   margin: 0.85em 0 0 15px;
-  position: absolute;
+  content: "";
   border-bottom: 3px solid #f0ad4f;
 }
 
@@ -99,18 +98,18 @@ h2 {
   font-family: "PT Serif", serif;
 }
 h2::before {
-  content: "";
   position: absolute;
   left: 0;
   width: 30px;
   margin: 0.25em 0 0 0;
+  content: "";
   border-bottom: 3px solid #f0ad4f;
 }
 h2::after {
-  content: "";
   position: absolute;
   width: 100%;
   margin: 0.85em 0 0 15px;
+  content: "";
   border-bottom: 3px solid #f0ad4f;
 }
 
@@ -133,17 +132,17 @@ section {
 }
 .header-logo__title {
   display: block;
-  font-family: "PT Serif", serif;
-  letter-spacing: 0.33em;
   padding-left: 0.33em;
+  letter-spacing: 0.33em;
   color: #df8a13;
+  font-family: "PT Serif", serif;
 }
 .header-logo__description {
   display: block;
-  font-size: 1.15rem;
   letter-spacing: 0.2em;
   color: #ffffff;
   text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
+  font-size: 1.15rem;
 }
 
 .main {
@@ -156,23 +155,17 @@ section {
   margin-bottom: 60px;
 }
 
-.top-week-title,
-.new-films-title {
-  font-family: "PT Serif", serif;
-  margin: -9.99999999px 0 1em 0;
-  font-size: 3rem;
-}
 .top-week-row,
 .new-films-row {
   margin-right: -7.5px;
-  margin-left: -7.5px;
   margin-bottom: -15px;
+  margin-left: -7.5px;
 }
 .top-week-item,
 .new-films-item {
+  margin-bottom: 15px;
   padding-right: 7.5px;
   padding-left: 7.5px;
-  margin-bottom: 15px;
 }
 .top-week-item__thumbnail,
 .new-films-item__thumbnail {
@@ -186,15 +179,15 @@ section {
 .new-films-item__title {
   display: block;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: block;
-  overflow: hidden;
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
 }
 .top-week-item__caption,
@@ -209,12 +202,6 @@ section {
 .top-week-item:hover h3,
 .new-films-item:hover h3 {
   color: #ffffff;
-}
-
-.film-news-title,
-.top-week-title {
-  margin: 60px 0 45px 45px;
-  font-size: 2.5rem;
 }
 
 .film-news-item .thumbnail {
@@ -265,12 +252,18 @@ section {
   font-size: 0.8em;
 }
 .film-info__well {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 2;
+  border-top-right-radius: 2;
 }
 
 .film-comment-form__button {
   float: right;
+}
+
+.embed-responsive {
+  border: 1px solid #d5d5d5;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
 }
 
 .left-saidbar {
@@ -278,8 +271,8 @@ section {
 }
 
 .vertical-slider {
-  border-radius: 4px;
   overflow: hidden;
+  border-radius: 4px;
 }
 .vertical-slider__image {
   width: 100%;
@@ -297,8 +290,8 @@ section {
 .user-login a {
   padding: 14px 5px 12px !important;
   color: #d5d5d5;
-  background-color: transparent !important;
   border: none !important;
+  background-color: transparent !important;
 }
 .user-login .active > a {
   color: #ffffff !important;
@@ -312,25 +305,25 @@ section {
   margin-bottom: 15px;
 }
 .site-news-item:not(:last-child)::after {
-  content: "";
   position: absolute;
   right: 0;
   bottom: -4px;
   width: calc(100% - 84.99999999px);
   height: 1px;
+  content: "";
   background-color: #d5d5d5;
 }
 .site-news-item:hover a {
   color: #df8a13;
 }
 .site-news-item:hover .thumbnail {
-  background-color: #df8a13;
   border-color: #df8a13;
+  background-color: #df8a13;
 }
 .site-news-item__thumbnail {
   float: left;
-  margin: 0 9.99999999px 9.99999999px 0;
   width: 75px;
+  margin: 0 9.99999999px 9.99999999px 0;
 }
 .site-news-item__image {
   width: 100%;
@@ -344,16 +337,16 @@ section {
   transition: color 0.25s;
   display: -webkit-box;
   overflow: hidden;
+  -webkit-box-orient: vertical;
   height: 50px;
   font-size: 1rem;
   line-height: 1.5rem;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
 .site-news-item__date {
-  font-size: 0.8rem;
   text-align: right;
   color: #6f6f6f;
+  font-size: 0.8rem;
 }
 
 .top-films__body {
@@ -364,11 +357,11 @@ section {
   margin-bottom: 0;
 }
 .top-films__item {
-  margin-left: -1px;
   margin-right: -1px;
-  background-color: transparent;
-  color: #165690 !important;
+  margin-left: -1px;
   padding-right: 55px;
+  color: #165690 !important;
+  background-color: transparent;
 }
 .top-films__item:first-child {
   border-top: none;
@@ -379,9 +372,9 @@ section {
   border-radius: 0;
 }
 .top-films__item:hover, .top-films__item:focus {
-  background-color: #df8a13 !important;
   color: #ffffff !important;
   border-color: #df8a13;
+  background-color: #df8a13 !important;
 }
 .top-films__item:hover .badge, .top-films__item:focus .badge {
   background-color: #232323;
@@ -437,14 +430,8 @@ section {
   .navbar-inverse .navbar-nav > li > a {
     border-radius: 4px;
   }
-  .navbar-left {
-    margin-bottom: 0;
-  }
   .navbar-left > li {
     margin: 5px 5px 5px 0;
-  }
-  .navbar-right {
-    margin-top: 0;
   }
   .navbar-right > li {
     margin: 5px 0 5px 5px;
@@ -453,6 +440,12 @@ section {
 @media (max-width: 767.8px) {
   .navbar-inverse .navbar-nav > li > a {
     text-align: center;
+  }
+  .navbar-left {
+    margin-bottom: 0;
+  }
+  .navbar-right {
+    margin-top: 0;
   }
 }
 @media (max-width: 575.8px) {
